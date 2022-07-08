@@ -13,8 +13,21 @@
       <ul class="list-group mb-4">
         {% for item in items %}
                 <li>
-                    {{ item.title }}
+                    {{item.title}}
                 </li>
+
+                {%  if item.status == "Not Started" %}
+                    {{item.status}}
+                        <form action="/complete" method="post">
+                            <button name="completeBtn" class = "btn btn-primary" type="submit" value = {{ item.id }} >Complete</button>
+                        </form>
+                {%  else  %}
+                    {{ item.status }}
+                    <form action="/uncomplete" method="post">
+                            <button name="uncompleteBtn" class = "btn btn-primary" type="submit" value = {{ item.id }} >Undo Complete</button>
+                        </form>
+                {%  endif %}
+
             {% endfor %}
       </ul>
     </div>
