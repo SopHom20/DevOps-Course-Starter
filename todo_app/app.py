@@ -22,15 +22,15 @@ def addItem():
         return redirect(url_for('index'))
 
 @app.route('/complete', methods=['GET', 'POST'])
-def complete():
+def completeItem():
     if request.method == 'POST':
         item = get_item(request.form['completeBtn'])
         item['status'] = "Complete"
         save_item(item)
         return redirect(url_for('index'))
 
-@app.route('/uncomplete', methods=['GET', 'POST'])
-def uncomplete():
+@app.route('/undocomplete', methods=['GET', 'POST'])
+def undoCompleteItem():
     if request.method == 'POST':
         item = get_item(request.form['uncompleteBtn'])
         item['status'] = "Not Started"

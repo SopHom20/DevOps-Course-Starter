@@ -17,7 +17,7 @@
                         <div class="d-flex w-100 justify-content-between">
                             <h5 class="mb-1"> {{ item.title }} </h5>
                             {% if item.status == "Not Started" %}
-                                <form action="/complete" method="post">
+                                <form action="{{ url_for("completeItem") }}" method="post">
                                     <button name="completeBtn" class="btn btn-primary btn-sm" type="submit"
                                             value={{ item.id }}>Complete
                                     </button>
@@ -25,7 +25,7 @@
 
                             {% else %}
 
-                                <form action="/uncomplete" method="post">
+                                <form action="{{ url_for("undoCompleteItem") }}" method="post">
                                     <button name="uncompleteBtn" class="btn btn-primary btn-sm" type="submit"
                                             value={{ item.id }}>Undo Complete
                                     </button>
@@ -42,7 +42,7 @@
     </div>
 
     <div class="col pt-3 ">
-        <form action="/add" method="post" class="add-item">
+        <form action="{{ url_for("addItem") }}" method="post" class="add-item">
             <div class="input-group mb-3 w-100">
 
                 <input type="text" class="form-control" placeholder="Add new item" aria-label="Add new item"
