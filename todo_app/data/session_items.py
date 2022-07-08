@@ -76,10 +76,9 @@ def remove_item(item):
     Args:
         item: The item to remove.
     """
-    existing_items = get_items()
-    updated_items = existing_items.remove(item)
-    print(existing_items)
+    updated_item = get_items()
+    updated_item.remove(item)
 
-    session['items'] = existing_items
+    session['items'] = updated_item
 
     return item
