@@ -2,46 +2,57 @@
 {% block title %}To-Do App{% endblock %}
 
 {% block content %}
-  <div class="jumbotron">
-    <h1 class="display-4">To-Do App</h1>
-    <p class="lead">Just another to-do app.</p>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <h2>Items</h2>
-      <ul class="list-group mb-4">
-        {% for item in items %}
-                <li>
-                    {{item.title}}
-                </li>
-
-                {%  if item.status == "Not Started" %}
-                    {{item.status}}
-                        <form action="/complete" method="post">
-                            <button name="completeBtn" class = "btn btn-primary" type="submit" value = {{ item.id }} >Complete</button>
-                        </form>
-                {%  else  %}
-                    {{ item.status }}
-                    <form action="/uncomplete" method="post">
-                            <button name="uncompleteBtn" class = "btn btn-primary" type="submit" value = {{ item.id }} >Undo Complete</button>
-                        </form>
-                {%  endif %}
-
-            {% endfor %}
-      </ul>
+    <div class="jumbotron">
+        <h1 class="display-4">To-Do App</h1>
+        <p class="lead">Just another to-do app.</p>
     </div>
 
-  <form action="/add" method="post" class="add-item">
-  <div class="add-item">
-      <h2> Add a new item</h2>
-    <label for="title">Item: </label>
-    <input type="text" name="title" required>
-  </div>
-  <div class="add-item">
-    <input type="submit" value="Submit">
-  </div>
-</form>
+    <div class="col pt-3 ">
+        <div>
+            <h2>Items</h2>
+            <ul class="list-group">
+                {% for item in items %}
+                    <div class="w-100">
+                        <div class="list-group-item">
+                            <h5 class="mb-1"> {{ item.title }} </h5>
+                            {% if item.status == "Not Started" %}
+                                <small>{{ item.status }} </small>
+                                <form action="/complete" method="post">
+                                    <button name="completeBtn" class="btn btn-primary btn-sm" type="submit"
+                                            value={{ item.id }}>Complete
+                                    </button>
+                                </form>
+                            {% else %}
+                                {{ item.status }}
+                                <form action="/uncomplete" method="post">
+                                    <button name="uncompleteBtn" class="btn btn-primary btn-sm" type="submit"
+                                            value={{ item.id }}>Undo Complete
+                                    </button>
+                                </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                    </li>
 
-  </div>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="col pt-3 ">
+        <form action="/add" method="post" class="add-item">
+            <div class="input-group mb-3 w-100">
+
+                <input type="text" class="form-control" placeholder="Add new item" aria-label="Add new item"
+                       aria-describedby="button-addon" name="title">
+                <div class="input-group-append">
+                    <input class="btn btn-outline-secondary" type="submit" id="button-addon"> </input>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+
+
 {% endblock %}
