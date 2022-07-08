@@ -14,25 +14,32 @@
             <ul class="list-group">
                 {% for item in items %}
                     <a class="list-group-item">
-                        <div class="d-flex w-100 justify-content-between">
+                        <div class="d-flex flex-row justify-content-between">
                             <h5 class="mb-1"> {{ item.title }} </h5>
-                            {% if item.status == "Not Started" %}
-                                <form action="{{ url_for("completeItem") }}" method="post">
-                                    <button name="completeBtn" class="btn btn-primary btn-sm" type="submit"
-                                            value={{ item.id }}>Complete
+                            <div class="d-flex flex-row ">
+                                {% if item.status == "Not Started" %}
+                                    <form action="{{ url_for("completeItem") }}" method="post">
+                                        <button name="completeBtn" class="btn btn-outline-primary btn-sm" type="submit"
+                                                value={{ item.id }}>Complete
+                                        </button>
+                                    </form>
+
+                                {% else %}
+
+                                    <form action="{{ url_for("undoCompleteItem") }}" method="post">
+                                        <button name="uncompleteBtn" class="btn btn-outline-primary btn-sm"
+                                                type="submit"
+                                                value={{ item.id }}>Undo Complete
+                                        </button>
+                                    </form>
+
+                                {% endif %}
+                                <form action="{{ url_for("removeItem") }}" method="post">
+                                    <button name="removeBtn" class="btn btn-outline-danger btn-sm  ml-3" type="submit"
+                                            value={{ item.id }}>Remove
                                     </button>
                                 </form>
-
-                            {% else %}
-
-                                <form action="{{ url_for("undoCompleteItem") }}" method="post">
-                                    <button name="uncompleteBtn" class="btn btn-primary btn-sm" type="submit"
-                                            value={{ item.id }}>Undo Complete
-                                    </button>
-                                </form>
-
-                            {% endif %}
-
+                            </div>
                         </div>
                         <small> {{ item.status }}</small>
                     </a>
