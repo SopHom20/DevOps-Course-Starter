@@ -13,8 +13,9 @@ def index():
     return render_template('index.html', items=items)
 
 
-@app.route('/add', methods=['GET', 'POST'])
-def add():
+
+@app.route('/add', methods=['POST'])
+def addItem():
     if request.method == 'POST':
         title = request.form.get('title')
         add_item(title)
