@@ -19,7 +19,7 @@
       </ul>
     </div>
 
-  <form action="/add" method="post" class="add-item">
+  <form action= {{ url_for("addItem") }} method="post" class="add-item">
   <div class="add-item">
       <h2> Add a new item</h2>
     <label for="title">Item: </label>
