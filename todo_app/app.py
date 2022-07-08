@@ -1,3 +1,5 @@
+from operator import attrgetter, itemgetter
+
 from flask import Flask, render_template, request, redirect, url_for
 
 from todo_app.flask_config import Config
@@ -9,7 +11,8 @@ app.config.from_object(Config())
 
 @app.route('/')
 def index():
-    items = get_items()
+    items = sorted(get_items(), key=lambda i: i['status'], reverse = True)
+
     return render_template('index.html', items=items)
 
 
@@ -25,7 +28,7 @@ def addItem():
 def completeItem():
     if request.method == 'POST':
         item = get_item(request.form['completeBtn'])
-        item['status'] = "Complete"
+        item['status'] = "Completed"
         save_item(item)
         return redirect(url_for('index'))
 
