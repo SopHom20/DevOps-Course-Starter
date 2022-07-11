@@ -2,33 +2,65 @@
 {% block title %}To-Do App{% endblock %}
 
 {% block content %}
-  <div class="jumbotron">
-    <h1 class="display-4">To-Do App</h1>
-    <p class="lead">Just another to-do app.</p>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-      <h2>Items</h2>
-      <ul class="list-group mb-4">
-        {% for item in items %}
-                <li>
-                    {{ item.title }}
-                </li>
-            {% endfor %}
-      </ul>
+    <div class="jumbotron">
+        <h1 class="display-4">To-Do App</h1>
+        <p class="lead">Just another to-do app.</p>
     </div>
 
-  <form action= {{ url_for("addItem") }} method="post" class="add-item">
-  <div class="add-item">
-      <h2> Add a new item</h2>
-    <label for="title">Item: </label>
-    <input type="text" name="title" required>
-  </div>
-  <div class="add-item">
-    <input type="submit" value="Submit">
-  </div>
-</form>
 
-  </div>
+    <div class="col pt-3 ">
+        <div>
+            <h2>Items</h2>
+            <ul class="list-group">
+                {% for item in items %}
+                    <a class="list-group-item">
+                        <div class="d-flex flex-row justify-content-between">
+                            <h5 class="mb-1"> {{ item.title }} </h5>
+                            <div class="d-flex flex-row ">
+                                {% if item.status == "Not Started" %}
+                                    <form action="{{ url_for("completeItem") }}" method="post">
+                                        <button name="completeBtn" class="btn btn-outline-primary btn-sm" type="submit"
+                                                value={{ item.id }}>Complete
+                                        </button>
+                                    </form>
+
+                                {% else %}
+
+                                    <form action="{{ url_for("undoCompleteItem") }}" method="post">
+                                        <button name="uncompleteBtn" class="btn btn-outline-primary btn-sm"
+                                                type="submit"
+                                                value={{ item.id }}>Undo Complete
+                                        </button>
+                                    </form>
+
+                                {% endif %}
+                                <form action="{{ url_for("removeItem") }}" method="post">
+                                    <button name="removeBtn" class="btn btn-outline-danger btn-sm  ml-3" type="submit"
+                                             value={{ item.id }} >Remove
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        <small class = "badge rounded-pill bg-dark text-light"> {{ item.status }}</small>
+                    </a>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="col pt-3 ">
+        <form action="{{ url_for("addItem") }}" method="post" class="add-item">
+            <div class="input-group mb-3 w-100">
+
+                <input type="text" class="form-control" placeholder="Add new item" aria-label="Add new item"
+                       aria-describedby="button-addon" name="title" required>
+                <div class="input-group-append">
+                    <input class="btn btn-outline-secondary" type="submit" id="button-addon"> </input>
+                </div>
+
+
+            </div>
+        </form>
+    </div>
+
 {% endblock %}
