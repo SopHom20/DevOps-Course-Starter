@@ -10,14 +10,32 @@ def get_lists():
 
     return response
 
+
+def alterCardInfo(list, status):
+    cards = []
+    for card in list:
+        item = {'id': card['id'], 'status': status, 'title': card['name']}
+        cards.append(item)
+    return cards
+
+
 def get_todo():
     todolist = (get_lists())[0]['cards']
 
-    cards = []
+    return alterCardInfo(todolist, 'Not Started')
 
-    for card in todolist:
-        item = {'id': card['id'], 'status': 'Not Started', 'title': card['name']}
-        cards.append(item)
 
-    return cards
+def get_done():
+    todolist = (get_lists())[1]['cards']
+    return alterCardInfo(todolist, 'Completed')
 
+
+def get_all_items():
+    return get_todo() + get_done()
+
+def create_card(title):
+    listid = (get_lists())[0]['id']
+    url = "https://api.trello.com/1/cards/"
+    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'name': title, 'idList': listid}
+
+    requests.post(url, params=query)

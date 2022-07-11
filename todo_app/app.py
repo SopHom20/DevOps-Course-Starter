@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 from todo_app.flask_config import Config
 from todo_app.data.session_items import get_items, add_item, get_item, save_item, remove_item
-from todo_app.data.trello_items import get_todo
+from todo_app.data.trello_items import get_all_items, create_card
 
 app = Flask(__name__)
 app.config.from_object(Config())
@@ -12,7 +12,7 @@ app.config.from_object(Config())
 
 @app.route('/')
 def index():
-    items = sorted(get_todo(), key=lambda i: i['status'], reverse=True)
+    items = sorted(get_all_items(), key=lambda i: i['status'], reverse=True)
 
 
     return render_template('index.html', items=items)
@@ -21,7 +21,7 @@ def index():
 @app.route('/add', methods=['POST'])
 def addItem():
         title = request.form.get('title')
-        add_item(title)
+        create_card(title)
         return redirect(url_for('index'))
 
 
