@@ -18,7 +18,6 @@ def index():
 
 @app.route('/add', methods=['POST'])
 def addItem():
-    if request.method == 'POST':
         title = request.form.get('title')
         add_item(title)
         return redirect(url_for('index'))
@@ -26,7 +25,6 @@ def addItem():
 
 @app.route('/complete', methods=['POST'])
 def completeItem():
-    if request.method == 'POST':
         item = get_item(request.form['completeBtn'])
         item['status'] = "Completed"
         save_item(item)
@@ -35,7 +33,6 @@ def completeItem():
 
 @app.route('/undocomplete', methods=['POST'])
 def undoCompleteItem():
-    if request.method == 'POST':
         item = get_item(request.form['uncompleteBtn'])
         item['status'] = "Not Started"
         save_item(item)
@@ -43,7 +40,6 @@ def undoCompleteItem():
 
 @app.route('/remove', methods=['POST'])
 def removeItem():
-    if request.method == 'POST':
         item = get_item(request.form['removeBtn'])
         remove_item(item)
         return redirect(url_for('index'))
