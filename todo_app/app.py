@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 from todo_app.flask_config import Config
 from todo_app.data.session_items import get_items, add_item, get_item, save_item, remove_item
-from todo_app.data.trello_items import get_all_items, create_card
+from todo_app.data.trello_items import get_all_items, create_card, delete_card
 
 app = Flask(__name__)
 app.config.from_object(Config())
@@ -42,6 +42,5 @@ def undoCompleteItem():
 
 @app.route('/remove', methods=['POST'])
 def removeItem():
-        item = get_item(request.form['removeBtn'])
-        remove_item(item)
+        delete_card(request.form['removeBtn'])
         return redirect(url_for('index'))

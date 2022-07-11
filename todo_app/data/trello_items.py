@@ -39,3 +39,8 @@ def create_card(title):
     query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'name': title, 'idList': listid}
 
     requests.post(url, params=query)
+
+def delete_card(item):
+    url = "https://api.trello.com/1/cards/" + item
+    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN')}
+    response = requests.delete(url, params=query)
