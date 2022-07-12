@@ -1,6 +1,6 @@
 import requests
 import os
-
+from todo_app.data.Item import Item
 
 def get_lists():
     url = "https://api.trello.com/1/boards/" + os.getenv('BOARD_ID') + "/lists"
@@ -14,14 +14,12 @@ def get_lists():
 def alterCardInfo(list, status):
     cards = []
     for card in list:
-        item = {'id': card['id'], 'status': status, 'title': card['name']}
-        cards.append(item)
+        cards.append(Item.from_trello_card(card, status))
     return cards
 
 
 def get_todo():
     todolist = (get_lists())[0]['cards']
-
     return alterCardInfo(todolist, 'Not Started')
 
 
