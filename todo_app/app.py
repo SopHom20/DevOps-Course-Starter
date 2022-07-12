@@ -49,6 +49,5 @@ def editItemDesc():
 @app.route('/editDueDate', methods=['POST'])
 def editItemDueDate():
     date = request.form.get('date')
-    date = date[3:5] + "-" + date[0:2] + "-" + date[6:10]
-    edit_due_date(request.form['updateDateBtn'], date)
+    edit_due_date(request.form['updateDateBtn'], datetime.strptime(date, '%d/%m/%Y'))
     return redirect(url_for('index'))

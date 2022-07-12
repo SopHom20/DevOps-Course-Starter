@@ -1,3 +1,5 @@
+from datetime import datetime
+
 class Item:
     def __init__(self, id, title, status, desc, due):
         self._id = id
@@ -7,7 +9,8 @@ class Item:
         if due is None:
             self._due = "No due date"
         else:
-            self._due = "Due: " + due[8:10] + "/" + due[5:7] + "/" + due[2:4]
+            date = datetime.strptime(due[0:10], '%Y-%m-%d')
+            self._due = "Due: " + date.strftime('%d/%m/%Y')
 
     @property
     def id(self):
