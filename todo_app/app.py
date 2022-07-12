@@ -3,6 +3,7 @@ from operator import attrgetter, itemgetter
 from flask import Flask, render_template, request, redirect, url_for
 from datetime import datetime
 
+from todo_app.data.ViewModel import ViewModel
 from todo_app.flask_config import Config
 from todo_app.data.trello_items import get_all_items, create_card, delete_card, complete_item, undo_complete, edit_desc, edit_due_date
 
@@ -13,7 +14,8 @@ app.config.from_object(Config())
 @app.route('/')
 def index():
     items = sorted(get_all_items(), key=lambda i: i.status, reverse=True)
-    return render_template('index.html', items=items)
+    item_view_model = ViewModel(items)
+    return render_template('index.html', view_model=item_view_model)
 
 
 @app.route('/add', methods=['POST'])
