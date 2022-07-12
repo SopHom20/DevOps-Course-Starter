@@ -18,31 +18,37 @@ def index():
 
 @app.route('/add', methods=['POST'])
 def addItem():
-    create_card(request.form.get('title'))
+    tasktitle = request.form.get('title')
+    create_card(tasktitle)
     return redirect(url_for('index'))
 
 
 @app.route('/complete', methods=['POST'])
 def completeItem():
-    complete_item(request.form['completeBtn'])
+    id = request.form['completeBtn']
+    complete_item(id)
     return redirect(url_for('index'))
 
 
 @app.route('/undocomplete', methods=['POST'])
 def undoCompleteItem():
-    undo_complete(request.form['uncompleteBtn'])
+    id = request.form['uncompleteBtn']
+    undo_complete(id)
     return redirect(url_for('index'))
 
 
 @app.route('/remove', methods=['POST'])
 def removeItem():
-    delete_card(request.form['removeBtn'])
+    id = request.form['removeBtn']
+    delete_card(id)
     return redirect(url_for('index'))
 
 
 @app.route('/editDesc', methods=['POST'])
 def editItemDesc():
-    edit_desc(request.form['updateDescBtn'], request.form.get('desc'))
+    id = request.form['updateDescBtn']
+    newdesc = request.form.get('desc')
+    edit_desc(id, newdesc)
     return redirect(url_for('index'))
 
 

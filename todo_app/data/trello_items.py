@@ -3,10 +3,20 @@ import os
 from todo_app.data.Item import Item
 
 
-def get_lists():
-    url = "https://api.trello.com/1/boards/" + os.getenv('BOARD_ID') + "/lists"
-    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'cards': 'open'}
+def build_parameters(extraparams={}):
+    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN')}
+    query.update(extraparams)
+    return query
 
+
+def build_url(extrapart=""):
+    url = "https://api.trello.com/1/" + extrapart
+    return url
+
+
+def get_lists():
+    url = build_url("boards/" + os.getenv('BOARD_ID') + "/lists")
+    query = build_parameters({'cards': 'open'})
     response = (requests.get(url, params=query)).json()
 
     return response
@@ -20,13 +30,15 @@ def alterCardInfo(list, status):
 
 
 def get_todo():
-    todolist = (get_lists())[0]['cards']
-    return alterCardInfo(todolist, 'Not Started')
+    todolist = (get_lists())[0]
+    todocards = todolist['cards']
+    return alterCardInfo(todocards, 'Not Started')
 
 
 def get_done():
-    todolist = (get_lists())[1]['cards']
-    return alterCardInfo(todolist, 'Completed')
+    donelist = (get_lists())[1]
+    donecards = donelist['cards']
+    return alterCardInfo(donecards, 'Completed')
 
 
 def get_all_items():
@@ -34,35 +46,40 @@ def get_all_items():
 
 
 def create_card(title):
-    listid = (get_lists())[0]['id']
-    url = "https://api.trello.com/1/cards/"
-    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'name': title, 'idList': listid}
+    todolist = (get_lists())[0]
+    todolistid = todolist['id']
+    url = build_url("cards/")
+    query = build_parameters({'idList': todolistid, 'name': title})
 
     requests.post(url, params=query)
 
 
-def delete_card(item):
-    url = "https://api.trello.com/1/cards/" + item
-    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN')}
+def delete_card(id):
+    url = build_url("cards/" + id)
+    query = build_parameters()
     requests.delete(url, params=query)
 
 
-def update_card(item, query):
-    url = "https://api.trello.com/1/cards/" + item
+def update_card(id, query):
+    url = build_url("cards/" + id)
     requests.put(url, params=query)
 
 
-def complete_item(item):
-    update_card(item, {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'idList': (get_lists())[1]['id']})
+def complete_item(id):
+    donelist = (get_lists())[1]
+    donelistid = donelist['id']
+    update_card(id, build_parameters({'idList': donelistid}))
 
 
-def undo_complete(item):
-    update_card(item, {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'idList': (get_lists())[0]['id']})
+def undo_complete(id):
+    todolist = (get_lists())[0]
+    todolistid = todolist['id']
+    update_card(id, build_parameters({'idList': todolistid}))
 
 
-def edit_desc(item, desc):
-    update_card(item, {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'desc': desc})
+def edit_desc(id, desc):
+    update_card(id, build_parameters({'desc': desc}))
 
 
-def edit_due_date(item, date):
-    update_card(item, {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'due': date})
+def edit_due_date(id, date):
+    update_card(id, build_parameters({'due': date}))
