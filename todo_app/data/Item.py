@@ -9,7 +9,7 @@ class Item:
         if due is None:
             self._due = "No due date"
         else:
-            date = datetime.strptime(due[0:10], '%Y-%m-%d')
+            date = datetime.strptime(due, '%Y-%m-%dT%H:%M:%S.000Z')
             self._due = "Due: " + date.strftime('%d/%m/%Y')
 
     @property
