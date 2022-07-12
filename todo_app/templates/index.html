@@ -24,18 +24,7 @@
                                         </button>
                                     </form>
 
-                                {% else %}
-
-                                    <form action="{{ url_for("undoCompleteItem") }}" method="post">
-                                        <button name="uncompleteBtn" class="btn btn-outline-primary btn-sm"
-                                                type="submit"
-                                                value={{ item.id }}>Undo Complete
-                                        </button>
-                                    </form>
-
-                                {% endif %}
-
-                                <button name="editBtn" class="btn btn-outline-warning btn-sm  ml-3" type="submit"
+                                    <button name="editBtn" class="btn btn-outline-warning btn-sm  ml-3" type="submit"
                                         data-toggle="modal" data-target="#editModal-{{ item.id }}">
                                     Edit
                                 </button>
@@ -46,19 +35,35 @@
                                                 <h4 class="modal-title">{{ item.title }}</h4>
                                             </div>
                                             <div class="modal-body">
+                                                 <label for="description">Description</label>
                                                 <form action="{{ url_for("editItemDesc") }}" method="post"
-                                                      class="edit-item" >
+                                                      class="edit-desc">
                                                     <div class="input-group mb-3 w-100">
 
-                                                        <input type="text" class="form-control"
-                                                               value = "{{ item.desc }}" aria-label="Edit item"
+                                                        <input id = "description" type="text" class="form-control"
+                                                               value="{{ item.desc }}" aria-label="Edit item"
                                                                aria-describedby="button-edit" name="desc" required>
                                                         <div class="input-group-append">
-                                                            <button name="updateBtn" class="btn btn-outline-secondary" type="submit"
-                                                                   id="button-edit" value = {{ item.id }}> Update  </button>
+                                                            <button name="updateDescBtn" class="btn btn-outline-secondary"
+                                                                    type="submit"
+                                                                    id="button-edit" value= {{ item.id }}> Update
+                                                            </button>
                                                         </div>
 
 
+                                                    </div>
+                                                </form>
+                                                <form action="{{ url_for("editItemDueDate") }}" method="post"
+                                                      class="edit-date">
+                                                    <label for="date">Due date</label>
+                                                    <div class="form-group d-flex flex-row justify-content-between">
+
+                                                        <input class="form-control" id="date" name="date"
+                                                               placeholder="DD/MM/YYY" type="text"/>
+
+                                                        <button name = "updateDateBtn" class="btn btn-outline-secondary " name="submit" type="submit" value= {{ item.id }}>
+                                                            Submit
+                                                        </button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -72,6 +77,19 @@
                                     </div>
                                 </div>
 
+                                {% else %}
+
+                                    <form action="{{ url_for("undoCompleteItem") }}" method="post">
+                                        <button name="uncompleteBtn" class="btn btn-outline-primary btn-sm"
+                                                type="submit"
+                                                value={{ item.id }}>Undo Complete
+                                        </button>
+                                    </form>
+
+                                {% endif %}
+
+
+
 
                                 <form action="{{ url_for("removeItem") }}" method="post">
                                     <button name="removeBtn" class="btn btn-outline-danger btn-sm  ml-3" type="submit"
@@ -81,7 +99,13 @@
                             </div>
                         </div>
                         <p class="mb-1"> {{ item.desc }}</p>
-                        <small class="badge rounded-pill bg-dark text-light"> {{ item.status }}</small>
+
+                        </form>
+                    <div class ="d-flex flex-row">
+                        <small class="badge rounded-pill bg-dark text-light mr-1"> {{ item.status }}</small>
+                        <small class="badge rounded-pill bg-dark text-light"> {{ item.due }}</small>
+                    </div>
+
                     </a>
                 {% endfor %}
             </ul>

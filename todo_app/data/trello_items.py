@@ -2,6 +2,7 @@ import requests
 import os
 from todo_app.data.Item import Item
 
+
 def get_lists():
     url = "https://api.trello.com/1/boards/" + os.getenv('BOARD_ID') + "/lists"
     query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'cards': 'open'}
@@ -31,6 +32,7 @@ def get_done():
 def get_all_items():
     return get_todo() + get_done()
 
+
 def create_card(title):
     listid = (get_lists())[0]['id']
     url = "https://api.trello.com/1/cards/"
@@ -38,23 +40,29 @@ def create_card(title):
 
     requests.post(url, params=query)
 
+
 def delete_card(item):
     url = "https://api.trello.com/1/cards/" + item
     query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN')}
     requests.delete(url, params=query)
 
-def move_item(item, listid):
+
+def update_card(item, query):
     url = "https://api.trello.com/1/cards/" + item
-    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'idList': listid}
     requests.put(url, params=query)
+
 
 def complete_item(item):
-    move_item(item, (get_lists())[1]['id'] )
+    update_card(item, {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'idList': (get_lists())[1]['id']})
+
 
 def undo_complete(item):
-    move_item(item, (get_lists())[0]['id'] )
+    update_card(item, {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'idList': (get_lists())[0]['id']})
 
-def edit_item(item, desc):
-    url = "https://api.trello.com/1/cards/" + item
-    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'desc': desc}
-    requests.put(url, params=query)
+
+def edit_desc(item, desc):
+    update_card(item, {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'desc': desc})
+
+
+def edit_due_date(item, date):
+    update_card(item, {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'due': date})

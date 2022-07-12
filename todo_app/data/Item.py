@@ -1,10 +1,13 @@
 class Item:
-    def __init__(self, id, title, status, desc):
+    def __init__(self, id, title, status, desc, due):
         self._id = id
         self._title = title
         self._status = status
         self._desc = desc
-        self._editMode = False
+        if due is None:
+            self._due = "No due date"
+        else:
+            self._due = "Due: " + due[8:10] + "/" + due[5:7] + "/" + due[2:4]
 
     @property
     def id(self):
@@ -23,8 +26,8 @@ class Item:
         return self._desc
 
     @property
-    def editMode(self):
-        return self._editMode
+    def due(self):
+        return self._due
 
     @id.setter
     def id(self, value):
@@ -42,10 +45,10 @@ class Item:
     def desc(self, value):
         self._desc = value
 
-    @editMode.setter
-    def editMode(self, value):
-        self._editMode = value
+    @due.setter
+    def due(self, value):
+        self._due = value
 
     @classmethod
     def from_trello_card(cls, card, status):
-        return cls(card['id'], card['name'], status, card['desc'])
+        return cls(card['id'], card['name'], status, card['desc'], card['due'])

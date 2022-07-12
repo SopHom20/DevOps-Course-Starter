@@ -1,9 +1,10 @@
 from operator import attrgetter, itemgetter
 
 from flask import Flask, render_template, request, redirect, url_for
+from datetime import datetime
 
 from todo_app.flask_config import Config
-from todo_app.data.trello_items import get_all_items, create_card, delete_card, complete_item, undo_complete, edit_item
+from todo_app.data.trello_items import get_all_items, create_card, delete_card, complete_item, undo_complete, edit_desc, edit_due_date
 
 app = Flask(__name__)
 app.config.from_object(Config())
@@ -39,8 +40,15 @@ def removeItem():
     return redirect(url_for('index'))
 
 
-@app.route('/edit', methods=['POST'])
+@app.route('/editDesc', methods=['POST'])
 def editItemDesc():
-    edit_item(request.form['updateBtn'], request.form.get('desc'))
+    edit_desc(request.form['updateDescBtn'], request.form.get('desc'))
+    return redirect(url_for('index'))
 
+
+@app.route('/editDueDate', methods=['POST'])
+def editItemDueDate():
+    date = request.form.get('date')
+    date = date[3:5] + "-" + date[0:2] + "-" + date[6:10]
+    edit_due_date(request.form['updateDateBtn'], date)
     return redirect(url_for('index'))
