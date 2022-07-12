@@ -34,14 +34,54 @@
                                     </form>
 
                                 {% endif %}
+
+                                <button name="editBtn" class="btn btn-outline-warning btn-sm  ml-3" type="submit"
+                                        data-toggle="modal" data-target="#editModal-{{ item.id }}">
+                                    Edit
+                                </button>
+                                <div id="editModal-{{ item.id }}" class="modal fade" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">{{ item.title }}</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="{{ url_for("editItemDesc") }}" method="post"
+                                                      class="edit-item" >
+                                                    <div class="input-group mb-3 w-100">
+
+                                                        <input type="text" class="form-control"
+                                                               value = "{{ item.desc }}" aria-label="Edit item"
+                                                               aria-describedby="button-edit" name="desc" required>
+                                                        <div class="input-group-append">
+                                                            <button name="updateBtn" class="btn btn-outline-secondary" type="submit"
+                                                                   id="button-edit" value = {{ item.id }}> Update  </button>
+                                                        </div>
+
+
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
                                 <form action="{{ url_for("removeItem") }}" method="post">
                                     <button name="removeBtn" class="btn btn-outline-danger btn-sm  ml-3" type="submit"
-                                             value={{ item.id }} >Remove
+                                            value={{ item.id }}>Remove
                                     </button>
                                 </form>
                             </div>
                         </div>
-                        <small class = "badge rounded-pill bg-dark text-light"> {{ item.status }}</small>
+                        <p class="mb-1"> {{ item.desc }}</p>
+                        <small class="badge rounded-pill bg-dark text-light"> {{ item.status }}</small>
                     </a>
                 {% endfor %}
             </ul>

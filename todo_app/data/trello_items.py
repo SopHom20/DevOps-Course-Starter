@@ -53,3 +53,8 @@ def complete_item(item):
 
 def undo_complete(item):
     move_item(item, (get_lists())[0]['id'] )
+
+def edit_item(item, desc):
+    url = "https://api.trello.com/1/cards/" + item
+    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'desc': desc}
+    requests.put(url, params=query)
