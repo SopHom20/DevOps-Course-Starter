@@ -9,3 +9,7 @@ class ViewModel:
     @property
     def not_started_items(self):
         return [item for item in self.items if item['status'] == "Not Started"]
+
+    @property
+    def completed_items(self):
+        return []
