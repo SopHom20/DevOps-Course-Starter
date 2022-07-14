@@ -9,13 +9,14 @@ def build_parameters(extraparams={}):
     return query
 
 
-def build_url(extrapart=""):
-    url = "https://api.trello.com/1/" + extrapart
+def build_url(endpoint=""):
+    url = "https://api.trello.com/1/" + endpoint
     return url
 
 
 def get_lists():
-    url = build_url("boards/" + os.getenv('BOARD_ID') + "/lists")
+    board_id = os.getenv('BOARD_ID')
+    url = build_url(f"boards/{board_id}/lists")
     query = build_parameters({'cards': 'open'})
     response = (requests.get(url, params=query)).json()
 
