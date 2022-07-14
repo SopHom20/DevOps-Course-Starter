@@ -11,7 +11,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 
-driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()))
+
 
 @pytest.fixture(scope='module')
 def app_with_temp_board():
@@ -33,6 +33,8 @@ def app_with_temp_board():
     # Give the app a moment to start
     sleep(1)
 
+
+
     # Return the application object as the result of the fixture
     yield application
 
@@ -44,13 +46,13 @@ def app_with_temp_board():
 def create_trello_board():
     url = "https://api.trello.com/1/boards"
     query = {'name' : "Test Board", 'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'), 'idOrganization': os.getenv('ID_ORGANIZATION')}
-    requests.post(url, params=query)
+    return requests.post(url, params=query).json()['id']
 
 
 def delete_trello_board(board_id):
 
     url = f"https://api.trello.com/1/boards/{board_id}"
-    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN'),}
+    query = {'key': os.getenv('API_KEY'), 'token': os.getenv('TOKEN')}
     requests.delete(url, params =query)
 
 

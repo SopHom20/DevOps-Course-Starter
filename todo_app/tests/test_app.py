@@ -49,7 +49,6 @@ def test_index_page(monkeypatch, client):
 
     # Make a request to our app's index page
     response = client.get('/')
-
     assert response.status_code == 200
     assert 'Test1' in response.data.decode()
     assert 'Test2' in response.data.decode()
