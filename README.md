@@ -66,3 +66,5 @@ You can also run specific test files by running the following:
 ```bash
 $ poetry run pytest -k [file or dir name] [...]
 ```
+
+Running the end-to-end test requires firefox to be downloaded 
