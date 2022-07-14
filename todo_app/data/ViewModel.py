@@ -16,4 +16,4 @@ class ViewModel:
 
     @classmethod
     def filter_items(cls, items, status):
-        return [item for item in items if item['status'] == status]
+        return [item for item in items if item.status == status]
