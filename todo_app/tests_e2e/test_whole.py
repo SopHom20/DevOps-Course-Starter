@@ -2,14 +2,12 @@ import os
 import pytest
 from threading import Thread
 from time import sleep
-from selenium import webdriver
 from dotenv import load_dotenv
 from todo_app import app
 import requests
 
 from selenium import webdriver
-from selenium.webdriver.firefox.service import Service as FirefoxService
-from webdriver_manager.firefox import GeckoDriverManager
+
 
 
 
