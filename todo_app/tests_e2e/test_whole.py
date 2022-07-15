@@ -82,4 +82,16 @@ def test_remove_item(driver, app_with_temp_board):
     driver.find_element(By.NAME, "title").send_keys("Task One")
     add_button.click()
 
+    #tests removing the first item
     driver.find_element(By.XPATH, "//button[@name='removeBtn']").click()
+
+    add_button = driver.find_element(By.NAME, "additembtn")
+    driver.find_element(By.NAME, "title").send_keys("Task Two")
+    add_button.click()
+
+    add_button = driver.find_element(By.NAME, "additembtn")
+    driver.find_element(By.NAME, "title").send_keys("Test Three")
+    add_button.click()
+
+    #removes second task
+    driver.find_element(By.ID, "remove Task Two").click()
