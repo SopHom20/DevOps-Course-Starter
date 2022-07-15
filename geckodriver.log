@@ -612,3 +612,254 @@ console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message f
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
 1657880104217	Marionette	INFO	Stopped listening on port 63337
+1657880223493	geckodriver	INFO	Listening on 127.0.0.1:63509
+1657880226561	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63510" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileUMimpA"
+1657880226816	Marionette	INFO	Marionette enabled
+1657880226820	Marionette	INFO	Listening on port 63521
+WebDriver BiDi listening on ws://localhost:63510
+Read port: 63521
+1657880226971	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileUMimpA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63510/devtools/browser/91584e88-4e51-4cb1-8327-392ae42fe6f3
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657880236682	Marionette	INFO	Stopped listening on port 63521
+1657880322750	geckodriver	INFO	Listening on 127.0.0.1:63681
+1657880325829	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63682" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofilevk8xX7"
+1657880326082	Marionette	INFO	Marionette enabled
+1657880326085	Marionette	INFO	Listening on port 63693
+WebDriver BiDi listening on ws://localhost:63682
+Read port: 63693
+1657880326234	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofilevk8xX7\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63682/devtools/browser/689cd79b-3a5c-49af-a85b-32fcb3ce8051
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657880336003	Marionette	INFO	Stopped listening on port 63693
+1657880352458	geckodriver	INFO	Listening on 127.0.0.1:63787
+1657880355562	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63788" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileGrot06"
+1657880355813	Marionette	INFO	Marionette enabled
+1657880355817	Marionette	INFO	Listening on port 63799
+WebDriver BiDi listening on ws://localhost:63788
+Read port: 63799
+1657880356021	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileGrot06\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63788/devtools/browser/51a91d69-39df-4895-9f50-2cfa054b7089
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657880365420	Marionette	INFO	Stopped listening on port 63799
+1657880400738	geckodriver	INFO	Listening on 127.0.0.1:63915
+1657880403815	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "63916" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofile6NKIO3"
+1657880404084	Marionette	INFO	Marionette enabled
+1657880404087	Marionette	INFO	Listening on port 63927
+WebDriver BiDi listening on ws://localhost:63916
+Read port: 63927
+1657880404235	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofile6NKIO3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:63916/devtools/browser/4be7a6dd-aea2-4c6e-9977-2bc72f14374d
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657880414960	Marionette	INFO	Stopped listening on port 63927
+1657880435389	geckodriver	INFO	Listening on 127.0.0.1:64038
+1657880438484	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64039" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileXlhnPh"
+1657880438737	Marionette	INFO	Marionette enabled
+1657880438740	Marionette	INFO	Listening on port 64049
+WebDriver BiDi listening on ws://localhost:64039
+Read port: 64049
+1657880438941	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileXlhnPh\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64039/devtools/browser/d61aa9b1-8f82-492e-a3f8-d83feda2f413
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657880449215	Marionette	INFO	Stopped listening on port 64049
+1657880510482	geckodriver	INFO	Listening on 127.0.0.1:64174
+1657880513578	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64175" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileDQ2d4L"
+1657880513836	Marionette	INFO	Marionette enabled
+1657880513839	Marionette	INFO	Listening on port 64187
+WebDriver BiDi listening on ws://localhost:64175
+Read port: 64187
+1657880513993	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileDQ2d4L\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64175/devtools/browser/c6bfd643-691c-48bd-9430-a657179d6434
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657880524307	Marionette	INFO	Stopped listening on port 64187
+1657880612424	geckodriver	INFO	Listening on 127.0.0.1:64333
+1657880615523	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64334" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileeAOo2U"
+1657880615780	Marionette	INFO	Marionette enabled
+1657880615783	Marionette	INFO	Listening on port 64345
+WebDriver BiDi listening on ws://localhost:64334
+Read port: 64345
+1657880615983	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileeAOo2U\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64334/devtools/browser/1308f798-c097-476f-aa66-c2e8bacb2937
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657880626227	Marionette	INFO	Stopped listening on port 64345
+1657880644992	geckodriver	INFO	Listening on 127.0.0.1:64447
+1657880648054	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64448" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileFZhjeT"
+1657880648309	Marionette	INFO	Marionette enabled
+1657880648312	Marionette	INFO	Listening on port 64459
+WebDriver BiDi listening on ws://localhost:64448
+Read port: 64459
+1657880648515	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileFZhjeT\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64448/devtools/browser/9431ee9f-e766-47f9-96de-8c071124804d
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657880658946	Marionette	INFO	Stopped listening on port 64459
+1657880755696	geckodriver	INFO	Listening on 127.0.0.1:64634
+1657880758790	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64635" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofilevIrySA"
+1657880759060	Marionette	INFO	Marionette enabled
+1657880759063	Marionette	INFO	Listening on port 64645
+WebDriver BiDi listening on ws://localhost:64635
+Read port: 64645
+1657880759156	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofilevIrySA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64635/devtools/browser/c63fb5d1-9d2d-4af4-8193-27989078dbbd
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657880769887	Marionette	INFO	Stopped listening on port 64645
+1657880974996	geckodriver	INFO	Listening on 127.0.0.1:64896
+1657880978041	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64897" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofilev4qbMC"
+1657880978311	Marionette	INFO	Marionette enabled
+1657880978314	Marionette	INFO	Listening on port 64908
+WebDriver BiDi listening on ws://localhost:64897
+Read port: 64908
+1657880978462	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofilev4qbMC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64897/devtools/browser/6c32fc00-dcc6-4ba4-9c5a-15964e901043
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657880988701	Marionette	INFO	Stopped listening on port 64908
+1657881034363	geckodriver	INFO	Listening on 127.0.0.1:65024
+1657881037460	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65025" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofile6MdwAc"
+1657881037719	Marionette	INFO	Marionette enabled
+1657881037723	Marionette	INFO	Listening on port 65037
+WebDriver BiDi listening on ws://localhost:65025
+Read port: 65037
+1657881037873	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofile6MdwAc\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65025/devtools/browser/63395dd0-9e7e-4949-b90b-9845bc9b8249
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657881048317	Marionette	INFO	Stopped listening on port 65037
+1657881054621	geckodriver	INFO	Listening on 127.0.0.1:65134
+1657881057708	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65135" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileHcFwSC"
+1657881057979	Marionette	INFO	Marionette enabled
+1657881057982	Marionette	INFO	Listening on port 65146
+WebDriver BiDi listening on ws://localhost:65135
+Read port: 65146
+1657881058132	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileHcFwSC\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65135/devtools/browser/7c6536c5-c4b1-4322-a116-0d34a7a69fd8
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657881068641	Marionette	INFO	Stopped listening on port 65146
+1657881110841	geckodriver	INFO	Listening on 127.0.0.1:50907
+1657881113917	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50908" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileOQSSkI"
+1657881114172	Marionette	INFO	Marionette enabled
+1657881114175	Marionette	INFO	Listening on port 50918
+WebDriver BiDi listening on ws://localhost:50908
+Read port: 50918
+1657881114323	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileOQSSkI\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50908/devtools/browser/d6522b73-123b-4cdb-beae-306cd77b2d52
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657881126025	Marionette	INFO	Stopped listening on port 50918
+1657881675335	geckodriver	INFO	Listening on 127.0.0.1:51407
+1657881678429	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51408" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofilekHMqLR"
+1657881678709	Marionette	INFO	Marionette enabled
+1657881678712	Marionette	INFO	Listening on port 51418
+WebDriver BiDi listening on ws://localhost:51408
+Read port: 51418
+1657881678861	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofilekHMqLR\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51408/devtools/browser/498d4edf-1379-4194-b5f2-1e962c666119
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657881690637	Marionette	INFO	Stopped listening on port 51418
+1657881987149	geckodriver	INFO	Listening on 127.0.0.1:51691
+1657881990224	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51692" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofile6idPGX"
+1657881990477	Marionette	INFO	Marionette enabled
+1657881990480	Marionette	INFO	Listening on port 51702
+WebDriver BiDi listening on ws://localhost:51692
+Read port: 51702
+1657881990630	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofile6idPGX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51692/devtools/browser/1b62b528-2903-4a79-bac2-83e9f39b5b2d
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://localhost:5000"
+1657882001985	Marionette	INFO	Stopped listening on port 51702

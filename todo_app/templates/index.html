@@ -11,9 +11,9 @@
     <div class="col pt-3 ">
         <div>
             <h2>Not Started</h2>
-            <ul class="list-group">
+            <ul class="list-group not-started">
                 {% for item in view_model.not_started_items %}
-                    <a class="list-group-item">
+                    <a class="list-group-item not-started">
                         <div class="d-flex flex-row justify-content-between">
                             <h5 name = "{{ item.title }}" class="mb-1"> {{ item.title }} </h5>
                             <div class="d-flex flex-row ">
@@ -102,9 +102,9 @@
         <div>
 
             <h2>Completed</h2>
-            <ul class="list-group">
+            <ul class="list-group completed">
                 {% for item in view_model.completed_items %}
-                    <a class="list-group-item">
+                    <a class="list-group-item completed">
                         <div class="d-flex flex-row justify-content-between">
                             <h5 class="mb-1"> {{ item.title }} </h5>
                             <div class="d-flex flex-row ">

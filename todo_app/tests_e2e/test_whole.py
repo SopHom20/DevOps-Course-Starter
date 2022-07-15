@@ -77,7 +77,7 @@ def test_create_item(driver, app_with_temp_board):
     assert new_task.is_displayed()
 
 
-def test_remove_item(driver, app_with_temp_board):
+def test_remove_items(driver, app_with_temp_board):
     add_button = driver.find_element(By.NAME, "additembtn")
     driver.find_element(By.NAME, "title").send_keys("Task One")
     add_button.click()
@@ -95,3 +95,17 @@ def test_remove_item(driver, app_with_temp_board):
 
     #removes second task
     driver.find_element(By.ID, "remove Task Two").click()
+
+    assert driver.find_element(By.NAME, "Task One").is_displayed()
+    assert driver.find_element(By.NAME, "Test Three").is_displayed()
+    assert len(driver.find_elements(By.NAME, "Task Two")) == 0
+
+def test_complete_item(driver, app_with_temp_board):
+    assert len(driver.find_elements(By.XPATH, "//a[@class = 'list-group-item completed']")) == 0 #no completed items yet
+    #complete first task
+    driver.find_element(By.XPATH, "//button[@name='completeBtn']").click()
+    assert len(driver.find_elements(By.XPATH, "//a[@class = 'list-group-item completed']")) == 1
+
+def test_uncomplete_item(driver, app_with_temp_board):
+    driver.find_element(By.XPATH, "//button[@name='uncompleteBtn']").click()
+    assert len(driver.find_elements(By.XPATH, "//a[@class = 'list-group-item completed']")) == 0
