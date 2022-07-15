@@ -15,7 +15,7 @@
                 {% for item in view_model.not_started_items %}
                     <a class="list-group-item">
                         <div class="d-flex flex-row justify-content-between">
-                            <h5 class="mb-1"> {{ item.title }} </h5>
+                            <h5 name = "{{ item.title }}" class="mb-1"> {{ item.title }} </h5>
                             <div class="d-flex flex-row ">
                                 <form action="{{ url_for("completeItem") }}" method="post">
                                     <button name="completeBtn" class="btn btn-outline-primary btn-sm" type="submit"
@@ -79,7 +79,7 @@
                                 </div>
 
                                 <form action="{{ url_for("removeItem") }}" method="post">
-                                    <button name="removeBtn" class="btn btn-outline-danger btn-sm  ml-3" type="submit"
+                                    <button name="removeBtn" class="btn btn-outline-danger btn-sm  ml-3" type="submit" id = "remove {{ item.title }}"
                                             value={{ item.id }}>Remove
                                     </button>
                                 </form>
@@ -144,7 +144,7 @@
                 <input type="text" class="form-control" placeholder="Add new item" aria-label="Add new item"
                        aria-describedby="button-addon" name="title" required>
                 <div class="input-group-append">
-                    <input class="btn btn-outline-secondary" type="submit" id="button-addon"> </input>
+                    <input class="btn btn-outline-secondary" type="submit" id="button-addon" value = "Submit" name = "additembtn">   </input>
                 </div>
 
 

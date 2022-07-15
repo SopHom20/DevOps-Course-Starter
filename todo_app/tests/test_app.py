@@ -26,9 +26,10 @@ class StubResponse():
 
 # Stub replacement for requests.get(url)
 def stub(url, params={'idList': 1, 'name': "Add Test"}):
+    base_url = "https://api.trello.com/1/"
     test_board_id = os.environ.get('BOARD_ID')
     fake_response_data = None
-    if url == f'https://api.trello.com/1/boards/{test_board_id}/lists':
+    if url == f'{base_url}boards/{test_board_id}/lists':
         fake_response_data = [{
             'id': '1',
             'name': 'To Do',
@@ -39,6 +40,7 @@ def stub(url, params={'idList': 1, 'name': "Add Test"}):
             'cards': [{'id': '456', 'name': 'Test2', 'desc': '', 'due': None}]
         }]
         return StubResponse(fake_response_data)
+
 
     raise Exception(f'Integration test did not expect URL "{url}"')
 
@@ -52,3 +54,4 @@ def test_index_page(monkeypatch, client):
     assert response.status_code == 200
     assert 'Test1' in response.data.decode()
     assert 'Test2' in response.data.decode()
+

@@ -7,6 +7,7 @@ from todo_app import app
 import requests
 
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
 @pytest.fixture(scope='module')
@@ -56,7 +57,28 @@ def driver():
         yield driver
 
 
-def test_task_journey(driver, app_with_temp_board):
+def test_all_displayed(driver, app_with_temp_board):
     driver.get('http://localhost:5000/')
 
     assert driver.title == 'To-Do App'
+    add_button = driver.find_element(By.NAME, "additembtn")
+    assert add_button.is_displayed()
+    assert add_button.is_enabled()
+
+def test_create_item(driver, app_with_temp_board):
+    add_button = driver.find_element(By.NAME, "additembtn")
+    item_title = driver.find_element(By.NAME, "title")
+    item_title.send_keys("New task")
+
+    add_button.click()
+
+    new_task = driver.find_element(By.NAME, "New task")
+    assert new_task.is_displayed()
+
+
+
+
+
+
+
+
