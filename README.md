@@ -53,3 +53,18 @@ You should see output similar to the following:
  * Debugger PIN: 226-556-590
 ```
 Now visit [`http://localhost:5000/`](http://localhost:5000/) in your web browser to view the app.
+
+## Running Tests
+
+Run all tests for this application by running the following command from your preferred shell:
+```bash
+$ poetry run pytest
+```
+
+You can also run specific test files by running the following:
+
+```bash
+$ poetry run pytest -k [file or dir name] [...]
+```
+
+Running the end-to-end test requires firefox to be downloaded 
