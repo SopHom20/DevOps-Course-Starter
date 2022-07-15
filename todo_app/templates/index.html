@@ -28,7 +28,7 @@
                                     Edit
                                 </button>
                                 <div id="editModal-{{ item.id }}" class="modal fade" tabindex="-1" role="dialog">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog" name = "modal">
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h4 class="modal-title">{{ item.title }}</h4>
@@ -85,7 +85,7 @@
                                 </form>
                             </div>
                         </div>
-                        <p class="mb-1"> {{ item.desc }}</p>
+                        <p name = 'desc {{ item.title }}' class="mb-1"> {{ item.desc }}</p>
 
                         </form>
                         <div class="d-flex flex-row">
