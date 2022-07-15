@@ -78,8 +78,8 @@
                                     </div>
                                 </div>
 
-                                <form action="{{ url_for("removeItem") }}" method="post">
-                                    <button name="removeBtn" class="btn btn-outline-danger btn-sm  ml-3" type="submit" id = "remove {{ item.title }}"
+                                <form action="{{ url_for("removeItem") }}" method="post" name = "remove">
+                                    <button name="removeBtn" class="btn btn-outline-danger btn-sm  ml-3" type="submit"
                                             value={{ item.id }}>Remove
                                     </button>
                                 </form>

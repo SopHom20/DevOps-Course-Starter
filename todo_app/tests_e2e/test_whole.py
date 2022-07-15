@@ -65,6 +65,7 @@ def test_all_displayed(driver, app_with_temp_board):
     assert add_button.is_displayed()
     assert add_button.is_enabled()
 
+
 def test_create_item(driver, app_with_temp_board):
     add_button = driver.find_element(By.NAME, "additembtn")
     item_title = driver.find_element(By.NAME, "title")
@@ -76,9 +77,9 @@ def test_create_item(driver, app_with_temp_board):
     assert new_task.is_displayed()
 
 
+def test_remove_item(driver, app_with_temp_board):
+    add_button = driver.find_element(By.NAME, "additembtn")
+    driver.find_element(By.NAME, "title").send_keys("Task One")
+    add_button.click()
 
-
-
-
-
-
+    driver.find_element(By.XPATH, "//button[@name='removeBtn']").click()
