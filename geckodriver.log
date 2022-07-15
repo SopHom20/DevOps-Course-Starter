@@ -230,3 +230,23 @@ Read port: 52855
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileK64QaY\\search.json.mozlz4", (void 0)))
 DevTools listening on ws://localhost:52846/devtools/browser/b07ecf94-fd91-4e89-bb2a-a324559c35ae
 1657815047150	Marionette	INFO	Stopped listening on port 52855
+1657874985363	geckodriver	INFO	Listening on 127.0.0.1:60011
+1657874988451	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60012" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofilecSM1S9"
+1657874988750	Marionette	INFO	Marionette enabled
+1657874988754	Marionette	INFO	Listening on port 60022
+WebDriver BiDi listening on ws://localhost:60012
+Read port: 60022
+1657874988843	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofilecSM1S9\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60012/devtools/browser/84958a50-c753-40b8-a086-338377e50a78
+1657874993345	Marionette	INFO	Stopped listening on port 60022
+1657875007464	geckodriver	INFO	Listening on 127.0.0.1:60081
+1657875010565	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60082" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileFDbAO6"
+1657875010830	Marionette	INFO	Marionette enabled
+1657875010833	Marionette	INFO	Listening on port 60091
+WebDriver BiDi listening on ws://localhost:60082
+Read port: 60091
+1657875010985	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\sophom\\AppData\\Local\\Temp\\rust_mozprofileFDbAO6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60082/devtools/browser/89dc48f7-dcdf-4fe0-bd54-f8352b9c86ff
+1657875015376	Marionette	INFO	Stopped listening on port 60091

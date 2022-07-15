@@ -9,14 +9,14 @@ done_items = [Item(3, 'TestOne', 'Completed', '', None), Item(4, 'TestTwo', 'Com
 
 
 @pytest.mark.parametrize("items, expected", [(default_items, default_items), (done_items, []), (default_items + done_items, default_items)])
-def test_view_model_gets_not_started_items(not_started_items, expected):
-    item_view_model = ViewModel(not_started_items)
+def test_view_model_gets_not_started_items(items, expected):
+    item_view_model = ViewModel(items)
     not_started_items = item_view_model.not_started_items
     assert not_started_items == expected
 
 
 @pytest.mark.parametrize("items, expected", [(default_items, []), (done_items, done_items), (default_items + done_items, done_items)])
-def test_view_model_gets_not_started_items(completed_items, expected):
-    item_view_model = ViewModel(completed_items)
+def test_view_model_gets_not_started_items(items, expected):
+    item_view_model = ViewModel(items)
     completed_items = item_view_model.completed_items
     assert completed_items == expected
